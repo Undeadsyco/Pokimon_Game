@@ -1,0 +1,115 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "mapData/FoxHall/FoxHallMain.tmx",
+    "automapping.whileDrawing": true,
+    "expandedProjectPaths": [
+        "imgs",
+        "mapData"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        ":/automap-tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "mapData/FoxHall/FoxHallMain.tmx": {
+            "expandedGroupLayers": [
+                11,
+                8,
+                14,
+                7,
+                16,
+                6
+            ],
+            "expandedObjectLayers": [
+                7,
+                23,
+                6,
+                21
+            ],
+            "scale": 1,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 1232.5,
+                "y": 237
+            }
+        },
+        "mapData/FoxHall/FoxHallMain.tmx#collisions": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "mapData/FoxHall/FoxHallMain.tmx#global_farm": {
+            "scaleInDock": 1,
+            "scaleInEditor": 0.5
+        },
+        "mapData/FoxHall/FoxHallMain.tmx#global_interior": {
+            "scaleInDock": 1
+        },
+        "mapData/FoxHall/FoxHallMain.tmx#global_town": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "mapData/FoxHall/FoxHallMain.tmx#slime_all": {
+            "dynamicWrapping": false,
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "mapData/FoxHall/FoxHallMain.tmx#tree_shake": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "mapData/FoxHall/FoxHallMain.tmx#trees": {
+            "dynamicWrapping": true
+        },
+        "mapData/rules/buildings.tmx": {
+            "expandedObjectLayers": [
+                6
+            ],
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 264.3333333333333,
+                "y": 216
+            }
+        },
+        "mapData/rules/buildings.tmx#Untitled": {
+            "scaleInDock": 1
+        },
+        "mapData/rules/buildings.tmx#global_farm": {
+            "scaleInDock": 1
+        },
+        "mapData/rules/buildings.tmx#global_town": {
+            "scaleInDock": 1
+        }
+    },
+    "frame.defaultDuration": 250,
+    "last.exportedFilePath": "C:/Users/Undea/OneDrive/Documents/projects/JavaScript/Pokimon_Game/src/assets/mapData/FoxHall",
+    "last.imagePath": "C:/Users/Undea/OneDrive/Documents/projects/JavaScript/Pokimon_Game/src/assets/imgs/tiles",
+    "map.height": 50,
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 50,
+    "openFiles": [
+        "mapData/FoxHall/FoxHallMain.tmx"
+    ],
+    "project": "untitled.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "mapData/FoxHall/FoxHallMain.tmx",
+        "mapData/rules/buildings.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.type": 0
+}

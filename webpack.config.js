@@ -1,16 +1,30 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BabelLoader = require('babel-loader');
 
 module.exports = {
+  entry: './src/index.ts',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, './build'),
+  },
   mode: 'development',
   module: {
     rules: [
       // babel js parsing
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.(js|jsx)$/,
         use: ['babel-loader'],
+        exclude: /node_modules/,
+      },
+      // ts parsing
+      {
+        test: /\.(ts|tsx)$/,
+        use: ['ts-loader'],
+        exclude: /node_modules/,
       },
       // html parsing
       {
@@ -22,7 +36,8 @@ module.exports = {
       },
       // image parsing
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|wav|mp3)$/,
+        include: path.resolve(__dirname, './src'),
         use: ['file-loader',]
       },
       // css parser
@@ -36,6 +51,17 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
+  },
+  resolveLoader: {
+    modules: [
+      path.join(__dirname, 'node_modules')
+    ]
+  },
+  resolve: {
+    modules: [
+      path.join(__dirname, 'node_modules')
+    ],
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new HtmlWebPackPlugin({
