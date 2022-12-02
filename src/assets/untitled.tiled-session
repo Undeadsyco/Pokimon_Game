@@ -21,23 +21,22 @@
         "mapData/FoxHall/FoxHallMain.tmx": {
             "expandedGroupLayers": [
                 11,
-                8,
-                14,
+                6,
                 7,
                 16,
-                6
+                14
             ],
             "expandedObjectLayers": [
-                7,
                 23,
                 6,
+                7,
                 21
             ],
             "scale": 1,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 1232.5,
-                "y": 237
+                "x": 1229,
+                "y": 314.5
             }
         },
         "mapData/FoxHall/FoxHallMain.tmx#collisions": {

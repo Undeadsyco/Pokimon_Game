@@ -24,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
+    "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "babel-loader": "^9.1.0",
@@ -47,6 +48,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "phaser": "^3.55.2"
+    "phaser": "^3.55.2",
+    "uuid": "^9.0.0"
   }
 }

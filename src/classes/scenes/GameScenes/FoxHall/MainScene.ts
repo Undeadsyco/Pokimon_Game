@@ -3,6 +3,7 @@ import { GameMap } from "../../../Maps";
 import eventCenter from "../../../../utils/eventCenter";
 import { mapKeys, sceneKeys } from "../../../../keys";
 import { GameManager } from "../../../gameManager";
+import PlayerContainer from "../../../entities/Player/CharacterContainer";
 
 export default class FoxHallMainScene extends Phaser.Scene {
   private gameMap: GameMap;
@@ -12,6 +13,7 @@ export default class FoxHallMainScene extends Phaser.Scene {
   private ghosts: Phaser.GameObjects.Group;
   cursors: Phaser.Types.Input.Keyboard.CursorKeys;
   gameManager: GameManager;
+  player: PlayerContainer;
 
   constructor() {
     super(sceneKeys.foxHallMain);
@@ -28,7 +30,7 @@ export default class FoxHallMainScene extends Phaser.Scene {
   }
 
   update(): void {
-
+    if (this.player) this.player.update(this.cursors);
   }
 
   private createMap(): void {
@@ -58,6 +60,25 @@ export default class FoxHallMainScene extends Phaser.Scene {
   private createGameManager() {
     eventCenter.emit('updateText', 'creating game manager');
 
-    this.gameManager = new GameManager(this, this.gameMap.objectLayers)
+    eventCenter.on('spawnPlayer', (playerObj: PlayerContainer) => {
+      this.createPlayer(playerObj);
+    })
+
+    this.gameManager = new GameManager(this, this.gameMap.objectLayers);
+    this.gameManager.setup();
+  }
+
+  private createPlayer(playerObj: PlayerContainer) {
+    this.player = new PlayerContainer(
+      this,
+      playerObj.x,
+      playerObj.y,
+      playerObj.id,
+      playerObj.maxHealth
+    );
+  }
+
+  private addCollisions() {
+
   }
 }

@@ -25,6 +25,7 @@ export default class GameMap {
   private foregroundLayers: { type: string; layers: Phaser.Tilemaps.TilemapLayer[] }[];
   private foregroundLayersKeys: string[];
   private tileMap: Phaser.Tilemaps.Tilemap;
+  private scale = 3;
 
   get objectLayers() { return this.LayerObjects; }
   get collisionLayers() { return this.blockedLayers; }
@@ -77,10 +78,15 @@ export default class GameMap {
     this.foregroundLayers = [
       { type: 'buildingsLayer', layers: [buildingForeground] },
     ]
+
+
+    this.scene.physics.world.bounds.width = this.tileMap.widthInPixels * this.scale;
+    this.scene.physics.world.bounds.height = this.tileMap.heightInPixels * this.scale;
+    this.scene.cameras.main.setBounds(0, 0, this.tileMap.widthInPixels * this.scale, this.tileMap.heightInPixels * this.scale);
   }
 
   private createLayer(name: string, tileSets: Phaser.Tilemaps.Tileset[], visible?: boolean, x?: number, y?: number) {
     eventCenter.emit('updateText', `creating map layer: ${name}`);
-    return this.tileMap.createLayer(name, tileSets, x ?? 0, y ?? 0).setScale(3).setVisible(visible ?? true);
+    return this.tileMap.createLayer(name, tileSets, x ?? 0, y ?? 0).setScale(this.scale).setVisible(visible ?? true);
   }
 }
